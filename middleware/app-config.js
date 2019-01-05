@@ -10,7 +10,7 @@ module.exports = (app) => {
   app.use(bodyParser.raw());
 
   app.use(function(req, res, next) {
-    var allowedOrigins = ['http://localhost', 'http://localhost:3000'];
+    var allowedOrigins = ['http://localhost', 'http://localhost:3000', 'https://eurovision-tutorial.herokuapp.com', 'http://eurovision-tutorial.herokuapp.com'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);
