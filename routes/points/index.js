@@ -5,8 +5,7 @@ const ctrl    = require('../../controller/points');
 router.get('/:year/:dir/:country', async (req,res) => {
   let {year, country, dir} = req.params;
   if(!year || !country || !dir) return res.status(400).send();
-  country = country.toLowerCase();
-
+  country = country.toLowerCase();  
   let cb;
   if(year>(new Date().getFullYear())){ //all years
     if(dir=='to')

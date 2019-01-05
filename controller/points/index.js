@@ -34,14 +34,18 @@ const allPointsFrom =  async (country) => {
 
 const pointsToByYear =  async (country,year) => {
   let result = await PointsToByYear.find({country, year}).then((cb) => {
-    return cb[0].voted;
+    if(cb[0])
+      return cb[0].voted;
+    return null;
   })
   return result;
 }
 
 const pointsFromByYear =  async (country,year) => {
   let result = await PointsFromByYear.find({country, year}).then((cb) => {
-    return cb[0].voted;
+    if(cb[0])
+      return cb[0].voted;
+    return null;
   })
   return result;
 }
