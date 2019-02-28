@@ -1,0 +1,8 @@
+{
+    "name": "Eurovision API docs",
+    "version": "1.0.0",
+    "description": "Eurovision API docs",
+    "template": {
+        "forceLanguage": "en"
+    }
+}

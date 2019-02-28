@@ -1,8 +1,10 @@
 const express     =   require('express');
 const bodyParser  =   require('body-parser');
+const path        =   require('path');
+const apiDocDir   =   path.join(__dirname, '../apidoc');
 
 module.exports = (app) => {
-  app.use(express.static("."));
+  app.use('/API', express.static(apiDocDir));
   app.use(bodyParser.json());         // to support JSON-encoded bodies
   app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
